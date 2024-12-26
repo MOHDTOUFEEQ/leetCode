@@ -4,25 +4,30 @@ var search = function(nums, target) {
 
     while (l<=r) {
         const mid =  Math.floor((l+r)/2)
-        console.log("im nums[mids",nums[mid]);
-        
-        if (nums[mid] == target){
+        if (nums[mid] == target) {
             return mid
         }
-
-        if (target < nums[mid] && target >= nums[l]) {
-            r = mid -1
-            console.log(nums[r]);
-            console.log("up");
-            
+        console.log(nums[mid]);
+        
+        if (nums[l]<=nums[mid] ) {
+            if (target < nums[mid] && target >= nums[l]) {
+                r = mid-1
+            } else {
+                l = mid + 1
+            }
         }
         else{
-            l = mid + 1
-            console.log(nums[l]);
+            if (target > nums[mid] && target <= nums[r]) {
+                l = mid + 1
+            } else {
+                r = mid - 1
+            }
+
         }
-    }
-    return -1
+        
 };
+return -1
+}
 
 
-console.log(search([1,3,5,7,10],10));
+console.log(search([3,8],8));
