@@ -1,6 +1,6 @@
-function subSet(params) {
+function subSet(nums) {
     let res = []
-    let len = params.length
+    let len = nums.length
     let curr = []
     function recurse(l) {
         if (l == len) {
@@ -9,7 +9,7 @@ function subSet(params) {
         }
 
         recurse(l+1)
-        curr.push(params[l])
+        curr.push(nums[l])
         recurse(l+1)
         curr.pop()
     
