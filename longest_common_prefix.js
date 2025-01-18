@@ -13,6 +13,6 @@ var longestCommonPrefix = function(strs) {
     return res
 };
 
-strs = ["taaoufeeq","taazeeshan","tawdawdyahiya"]
+const strs = ["ab","a","aaaa"]
 
 console.log(longestCommonPrefix(strs));

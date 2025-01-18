@@ -1,29 +1,35 @@
-function Palindrome(str) {
-    if (str.length == 1) {
-        return str
+var longestPalindrome = function (s) {
+    let res = "" 
+    if (s.length == 0) {
+        return res
     }
-    // odd
-    // let curr = 0
-    let res = ""
-    for (let i = 0; i < str.length; i++) {
-        let l = i  
-        let r = i + 1
+    for (let i = 0; i < s.length; i++) {
         
-        while(str[l] && str[r] && str[l] == str[r]){
-            console.log("dhawiha",str[l],str[r]);
-            let curr = str.slice(l, r + 1);
-            
-            if (curr.length >= res.length) {
-                console.log("im deep");
-                
-                res = curr
+        let l = i 
+        let r = i 
+        while (s[l] == s[r] && l>=0 & r < s.length) {
+            if ( r - l +1 >  res.length ) {
+                res = s.slice(l,r+1)
+            }
+
+            l = l-1
+            r = r +1
+        }
+
+        l = i
+        r = i + 1
+        while (s[l] == s[r] && l>=0 & r < s.length) {
+            if (r-l+2 >  res.length ) {
+                res = s.slice(l,r+1)
             }
             l--
             r++
         }
-        // curr = curr +1
+        
+        
     }
     return res
-}
+}   
 
-console.log(Palindrome("aaaacabas"));
+
+console.log(longestPalindrome("babad"));
