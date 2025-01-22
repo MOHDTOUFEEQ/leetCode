@@ -1,28 +1,20 @@
-// var rotate = function(nums, k) {
-//     let len = k % nums.length 
-//     for (let i = 0; i < len; i++) {
-//         let r = nums.pop()
-//         nums.unshift(r)
-        
-//     }
-    
-//     return nums
-// };
-
-
-// console.log(rotate([1,2,3],4));
-
 var rotate = function(nums, k) {
-    let len = k % nums.length 
-    console.log(len);
     
-    const a = nums.splice(numlen)
-    console.log(a);
-    
-    nums.unshift(...a)
-    
-    return nums
-};
-
+    if (k == nums.length) {
+        return nums
+    }else if(k<nums.length){
+        let res = nums.length - k
+        let curr = nums.slice(res);
+        nums.splice(res,)
+        nums.unshift(...curr)    
+        return nums
+    }else{
+        let res = k % (nums.length )
+        let curr = nums.slice(nums.length-res);
+        nums.splice(nums.length-res,)
+        nums.unshift(...curr)    
+        return nums
+    }
+}
 
 console.log(rotate([-1,-100,3,99,2,312],2));
