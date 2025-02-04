@@ -39,4 +39,4 @@ var divide = function(dividend, divisor) {
 };
 
 // Test case
-console.log(divide(21232133, 3)); // Expected output: 7077377
+console.log(divide(27, 3)); // Expected output: 7077377

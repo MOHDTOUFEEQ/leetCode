@@ -1,26 +1,18 @@
 var longestCommonPrefix = function(strs) {
-    let ans = ""
-    if (strs.length == 0) {return}
-    let j = 0
-    
-    let smalletst_string = strs.reduce((shortest, current) =>
-        current.length < shortest.length ? current : shortest
-    );
-    let length = 0
-    for (let i = 0; i < strs.length; i++) {
-       if(length < strs.length){
-
-           while(true){
-            if (strs[i].startswith(smalletst_string[i] && )) {
-                break
-            }
+    let res = ""
+    console.log("1", strs[0]); 
+    for (let index = 0; index < strs[0].length; index++) {
+        
+        for (const key of strs) {
+           if (index == key.length || key[index] != strs[0][index]) {
+            return res
            }
         }
+        res = res+strs[0][index]
     }
-
-
-
-    return smalletst_string
+    return res
 };
 
-console.log(longestCommonPrefix(["dog","racecar","car"]));
+const strs = ["ab","a","aaaa"]
+
+console.log(longestCommonPrefix(strs));

@@ -15,4 +15,4 @@ var findLengthOfLCIS = function(nums) {
     return highest
 };
 
-console.log(findLengthOfLCIS([1,2,3,4,5]));
+console.log(findLengthOfLCIS([100,4,200,1,3,2]));
