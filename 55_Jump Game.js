@@ -6,7 +6,7 @@
 //     for (let i = 0; i < nums.length-1; i++) {
 //         console.log(nums[i], max_reach);
         
-//         if ( max_reach - i == 0 && nums[i]==0) {
+//         if ( max_reach - i == 0 && nums[i]==0) {`
 //             return false
 //         }
 //         if ( i + nums[i] >= (nums.length-1)) {
