@@ -1,20 +1,46 @@
-function del(nums) {
-   let max_sum = nums[0]
-   let curr_sum   = nums[0]
-
-   for (let i = 1; i < nums.length; i++) {
-       let sum = nums[i] + curr_sum   
-         
-       if (sum > curr_sum) {
-            curr_sum += nums[i]
-        }else{
-            curr_sum = nums[i]
-        }
+// var lengthOfLongestSubstring = function(s) {
+//     let curr = ""
+//     let res = 0
+    
+//     for (let i = 0; i < s.length; i++) {
         
-        max_sum = Math.max(max_sum, curr_sum)
-   }
+//         if (curr.includes(s[i])) {
+//             curr = curr.substring(curr.indexOf(s[i])+1)
+//             curr += s[i]
+//         }else{
+//             curr += s[i]
+//         }
+        
+//         res = Math.max(res, curr.length)
+//     }
 
-   return max_sum
-}
 
-console.log(del( [-2,1,-3,4,-1,2,1,-5,4]));
+//     return res
+// };
+
+
+// console.log(lengthOfLongestSubstring("dvde"));
+
+
+var lengthOfLongestSubstring = function(s) {
+    let i = 0
+    let r = 1
+    let res = 0
+    
+
+    while(i<=r || r < s.length ){
+        if(s[r] == s[i]){
+            i = r
+            r += 1
+        }else{
+            r += 1
+        }
+        res = Math.max(res, (r-i)+1)
+    }
+
+
+    return res
+};
+
+
+console.log(lengthOfLongestSubstring("dvde"));

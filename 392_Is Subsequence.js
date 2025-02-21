@@ -11,7 +11,7 @@ var isSubsequence = function(s, t) {
     let index = 0
     let first = s[0]
 
-    for (let i = 0; i < t.length; i+ +){
+    for (let i = 0; i < t.length; i++){
         if (t[i] == first) {
             if (index == s.length -1) {
                 return true
