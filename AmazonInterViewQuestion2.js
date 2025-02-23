@@ -13,4 +13,4 @@ function name(n) {
 }
 
 
-console.log(name([9,2,3]));
+console.log(name([9,2,3,100]));
