@@ -36,4 +36,4 @@ RandomizedSet.prototype.getRandom = function() {
     let res = [...this.map.values()]
     let random = Math.floor((Math.random() * res.length))
     return res[random]
-};
+};convert
